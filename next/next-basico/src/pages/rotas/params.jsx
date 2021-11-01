@@ -1,4 +1,6 @@
-import { useRouter } from 'next/dist/client/router'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
+
 export default function params() {
   const router = useRouter()
   const id = router.query.id
@@ -8,6 +10,9 @@ export default function params() {
       <h1>
         Rotas params: {id}, {name}
       </h1>
+      <Link href="/rotas">
+        <button>Voltar</button>
+      </Link>
     </div>
   )
 }
